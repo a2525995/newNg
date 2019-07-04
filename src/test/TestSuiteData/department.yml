@@ -1,0 +1,8 @@
+api_infos:
+  -
+    url: /depart/get/test/12345
+    name: sub_list
+
+  -
+    url: /depart/get/all/test/666
+    name: all_sub_list

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" >
+    <parameter name="report.config" value="src/main/resources/extent-config.xml"/>
+    <parameter name="system.info" value="com.qa.api_test.report.MySystemInfo"/>
+    <test verbose="2" preserve-order="true" name="C:/Users/Administrator/IdeaProjects/TJJD">
+        <classes>
+            <class name="test_project.BeforeTestSuite">
+                <methods>
+                    <include name="PrepareTest"/>
+                </methods>
+            </class>
+            <class name="test_project.Department">
+                <methods>
+                    <include name="DepartmentSubList"/>
+                    <include name="DepartmentAllSubList"/>
+                </methods>
+            </class>
+            <class name="test_project.Intelligence">
+                <methods>
+                    <include name="testTypeList"/>
+                    <include name="testGetIntelligenceList"/>
+                    <include name="testAddClue"/>
+                    <include name="testDispatch"/>
+                    <include name="testWatchContent"/>
+                </methods>
+            </class>
+            <class name="test_project.Suspect">
+                <methods>
+                    <include name="testListSuspect"/>
+                    <include name="testAddIntelligence"/>
+                    <include name="testSaveNote"/>
+                    <include name="testGetNode"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.qa.api_test.report.MyExtentTestNgFormatter"/>
+    </listeners>
+</suite>
